@@ -1,15 +1,32 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 header {
-  
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100px;
 }
 
-img {
-    width: 100%;
+header button {
+  background-color: transparent;
+  width: 30px;
+  height: 100%;
+  font-size: 20px;
+  font-weight: 300;
+  border: none;
+  border-radius: 8%;
+  cursor: pointer;
+  animation: 0.3s;
+}
+
+header button:hover {
+  color: gray;
 }
 
 a {
@@ -18,48 +35,111 @@ a {
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   background-color: black;
   width: 100%;
-  height: 50px;
-  padding: 5px;
-  color: white;
-  font-size: 18px;
-  font-weight: 300;
+  height: 40px;
   bottom: 0;
 }
+
+/* ID CSS */
 
 
 /* Class CSS */
 
-.navbar {
-    background-color: brown;
-}
-
-.fill {
-  background-color: green;
-  height: 80px;
+.banner {
+  background-image: url("../image/banner.png");
+  background-position-x: center;
+  background-size: contain;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 500px;
+  margin-bottom: -25px;
 }
 
 .header {
-    background-color: gray;
+  width: 100%;
+  height: 100%;
 }
 
-header img {
-  width: 100%;
+.navbar {
+  height: 50%;
+  background-color: green;
+}
+
+.navbar a {
+  color: black;
+  margin: 0 10px;
 }
 
 .category {
-    background-color: blueviolet;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 50%;
+  background-color: #fffdd0;
+}
+
+.home-button {
+  font-size: 30px;
+  width: 5%;
+}
+
+.cat-name {
+  width: 10%;
+  padding-left: 30px;
+  cursor: context-menu;
 }
 
 .category-name {
-    background-color: aqua;
-    border: 1px solid black;
+  width: 60%;
+  height: 100%;
+  border: 1px solid black;
+  justify-content: space-around;
+  border: none;
+}
+
+.category-name a {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+}
+
+.category-name a:hover {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 20%;
+  background-color: #fc8104;
 }
 
 .searchbox {
-    background-color: chocolate;
+  width: 20%;
+  height: 80%;
+  padding: 0 5px;
+  border: 1px solid gray;
+  border-radius: 100px;
+}
+
+.searchbox input[type=text] {
+  font-size: 16px;
+  width: 280px;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+}
+
+.searchbox input[type=text]:focus {
+  outline: none;
+}
+
+.searchbox input::placeholder {
+  font-size: 16px;
 }
 
 .h-center {
@@ -94,12 +174,77 @@ header img {
   display: flex;
 }
 
+footer .copyright {
+  padding: 5px;
+  color: white;
+  font-size: 15px;
+  font-weight: 50;
+}
+
 footer .circle {
   display: inline-block;
-  width: 5px;
-  height: 5px;
+  width: 4px;
+  height: 4px;
   border: 1px solid white;
   border-radius: 50%;
   background-color: white;
   margin: 0 5px;
+}
+
+footer .about {
+  right: 20px;
+  width: 24px;
+  height: 24px;
+  padding: 5px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  position: fixed;
+  transition-delay: 0.2s;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+
+footer .about i {
+  color: black;
+  font-size: 20px;
+  transition-delay: 0.2;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+
+footer .about:hover i {
+  font-size: 0;
+  opacity: 0;
+  transition-delay: 0.2;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+
+footer .about-link {
+  font-size: 0;
+  min-width: 70px;
+  opacity: 1;
+  transition-delay: 0.1s;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+
+footer .about:hover .about-link {
+  font-size: 15px;
+  opacity: 1;
+  transition-delay: 0.2s;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+
+footer .about:hover {
+  border-radius: 100px;
+  width: 80px;
+  color: black;
+  justify-content: center;
+  transition-delay: 0.2s;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
 }
